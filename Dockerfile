@@ -26,8 +26,8 @@ RUN apk add $RUN_DEPS && \
     rm /var/cache/apk/*
 
 LABEL \
-  MAINTAINER="Christoph Wiechert <wio@psitrax.de>" \
-  CONTRIBUTORS="Mathias Kaufmann <me@stei.gr>, Cloudesire <cloduesire-dev@eng.it>"
+  MAINTAINER="Antoine Millet <antoine@inaps.org>" \
+  CONTRIBUTORS="Christoph Wiechert <wio@psitrax.de>, Mathias Kaufmann <me@stei.gr>, Cloudesire <cloduesire-dev@eng.it>"
 
 ENV AUTOCONF=mysql \
     MYSQL_HOST="mysql" \
