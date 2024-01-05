@@ -16,7 +16,7 @@ services:
       - psql_volume:/var/lib/postgresql
 
   pdns_mysql:
-    image: naps/powerdns
+    build: ../
     environment:
       AUTOCONF: mysql
       MYSQL_HOST: mysql
@@ -27,7 +27,7 @@ services:
       - --allow-axfr-ips=127.0.0.1,123.1.2.3
 
   pdns_psql:
-    image: naps/powerdns
+    build: ../
     environment:
       AUTOCONF: postgres
       PGSQL_HOST: psql
@@ -38,7 +38,7 @@ services:
       - --allow-axfr-ips=127.0.0.1,123.1.2.3
 
   pdns_sqlite:
-    image: naps/powerdns
+    build: ../
     environment:
       AUTOCONF: sqlite
       SQLITE_DB: /data/db.sqlite

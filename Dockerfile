@@ -1,7 +1,7 @@
 FROM alpine:3.15 as base
 
-ENV REFRESHED_AT="2022-12-20" \
-    POWERDNS_VERSION="4.7.0" \
+ENV REFRESHED_AT="2024-01-05" \
+    POWERDNS_VERSION="4.7.4" \
     BUILD_DEPS="g++ make mariadb-dev postgresql-dev sqlite-dev curl boost-dev mariadb-connector-c-dev" \
     RUN_DEPS="bash libpq sqlite-libs libstdc++ libgcc mariadb-client postgresql-client sqlite mariadb-connector-c lua-dev curl-dev boost-program_options" \
     POWERDNS_MODULES="bind gmysql gpgsql gsqlite3"
@@ -37,15 +37,15 @@ ENV AUTOCONF=mysql \
     MYSQL_PASS="root" \
     MYSQL_DB="pdns" \
     MYSQL_DNSSEC="no" \
-    MYSQL_VERSION="4.3.0" \
+    MYSQL_VERSION="4.7.0" \
     PGSQL_HOST="postgres" \
     PGSQL_PORT="5432" \
     PGSQL_USER="postgres" \
     PGSQL_PASS="postgres" \
     PGSQL_DB="pdns" \
-    PGSQL_VERSION="4.3.0" \
+    PGSQL_VERSION="4.7.0" \
     SQLITE_DB="pdns.sqlite3" \
-    SQLITE_VERSION="4.3.1" \
+    SQLITE_VERSION="4.7.0" \
     SCHEMA_VERSION_TABLE="_schema_version"
 
 EXPOSE 53/tcp 53/udp
